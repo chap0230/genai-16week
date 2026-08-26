@@ -27,15 +27,15 @@ THE FIRST LINE and stop — do not reconstruct the program from memory.
 
 TOOLS: the freshness check runs on the **AWS MCP** connector (Claude directory,
 authless). Its tools are `aws___search_documentation`, `aws___read_documentation`,
-`aws___retrieve_skill`, plus `aws___call_aws`, `aws___list_regions`,
-`aws___get_regional_availability`. They appear namespaced in your tool list as
+`aws___retrieve_skill`. It is authless — it serves public AWS documentation and
+curated skills, and needs no AWS account. They appear namespaced in your tool list as
 `mcp__AWS_MCP__aws___search_documentation`, `mcp__AWS_MCP__aws___read_documentation`,
 `mcp__AWS_MCP__aws___retrieve_skill` (confirmed live 2026-08-25). The namespaced name
 is the SAME tool, not a missing one. They may also be DEFERRED — if you see them
 listed by name only, load them first with
 `ToolSearch` query `select:mcp__AWS_MCP__aws___search_documentation,mcp__AWS_MCP__aws___read_documentation,mcp__AWS_MCP__aws___retrieve_skill`
 in ONE call, then use them. Search your tool list for `aws___` before concluding
-they are absent.
+they are absent. **Never use `aws___call_aws` — do not touch his AWS account. His sandbox is his own; you only read public docs.**
 
 USING THE SKILLS: call `aws___search_documentation` with `topics: ["agent_skills"]`
 to get the exact opaque `skill_name`, then pass it verbatim to `aws___retrieve_skill`.
@@ -50,11 +50,11 @@ AWS-curated skills were unavailable and the check ran on public docs only.
 
 Sessions run **1 hr at 6am and 1 hr at 1pm**, weekdays.
 
-WEEK SCHEDULE (session days): W1 Aug31-Sep4 · W2 Sep8-11 · W3 Sep14-18 · W4 Sep21-25 · W5 Sep28-Oct2 · W6 Oct5-9 · W7 Oct12-16 · W8 Oct19-23 · W9 Oct26-30 · W10 Nov2-6 · W11 Nov9-13 · W12 Nov16-20 · W13 Nov23-25 · W14 Nov30-Dec4 · W15 Dec7-11 · W16 Dec14-18 (all 2026). Program ends Dec 18, 2026; Continuous Mode starts Jan 4, 2027.
+WEEK SCHEDULE (session days): W1 Aug26-28 (3 days, Wed start) · W2 Aug31-Sep4 · W3 Sep8-11 · W4 Sep14-18 · W5 Sep21-25 · W6 Sep28-Oct2 · W7 Oct5-9 · W8 Oct12-16 · W9 Oct19-23 · W10 Oct26-30 · W11 Nov2-6 · W12 Nov9-13 · W13 Nov16-20 · W14 Nov23-25 · W15 Nov30-Dec4 · W16 Dec7-11 (all 2026). Program ends Dec 11, 2026; Continuous Mode starts Dec 14, 2026.
 
 GUARDS:
-- Before 2026-09-05 (Week 1 hasn't finished) → no review. Send a short pre-start note: program begins Mon Aug 31, and the ~90-minute sandbox setup should be done this weekend (AWS Budgets $50/mo with 50/80/100% alerts; Bedrock model access in BOTH us-east-1 and us-west-2; `genai-16week` repo; Claude Code / Codex / Kiro / AgentCore CLI `npm install -g @aws/agentcore`; Python 3.12+ with uv; **Node 22+** for the TypeScript work; `LEARNING-LOG.md` at repo root). Nudge him once on the two human commitments: pick one or two peers to receive Friday gate write-ups, and book the Week 13 internal presentation date now.
-- After 2026-12-19 → lighter Continuous Mode check instead.
+- Before 2026-08-29 (Week 1 hasn't finished) → no review. Send a short pre-start note: program begins Mon Aug 31, and the ~90-minute sandbox setup should be done this weekend (AWS Budgets $50/mo with 50/80/100% alerts; Bedrock model access in BOTH us-east-1 and us-west-2; `genai-16week` repo; Claude Code / Codex / Kiro / AgentCore CLI `npm install -g @aws/agentcore`; Python 3.12+ with uv; **Node 22+** for the TypeScript work; `LEARNING-LOG.md` at repo root). Nudge him once on the two human commitments: pick one or two peers to receive Friday gate write-ups, and book the Week 13 internal presentation date now.
+- After 2026-12-12 → lighter Continuous Mode check instead.
 
 ## STEP 1 — WEEKLY CURRENCY SWEEP
 

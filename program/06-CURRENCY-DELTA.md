@@ -122,27 +122,21 @@ Each scheduled session, before delivering anything, checks the day's material ag
 
 ---
 
-## 2026-08-26 — Calendar reset and week renumbering
+## 2026-08-26 — Week 1 compressed to three days
 
-Not a currency finding. A structural correction, recorded here because every entry above
-uses the OLD week numbers and would otherwise mislead.
+Not a currency finding; a schedule correction, recorded here because the daily checks read this
+file and should know why Week 1 looks short.
 
-The program was authored to open Tuesday 2026-08-25. The scheduled-task delivery pipeline
-never worked — the tasks were reading local files that a cloud-run session cannot reach —
-so no session was ever delivered and no work was done. Rather than begin a week already
-three blocks down, **Week 1 was moved to Monday 2026-08-31** and every week shifted one
-week later. The program now ends **2026-12-18**; Continuous Mode begins **2027-01-04**.
+The program was authored to open Tuesday 2026-08-25. The scheduled-task delivery pipeline did not
+work that day — the tasks were trying to read local files that a cloud-run session cannot reach —
+and no session was delivered. The pipeline now reads this repo directly and needs no local access.
 
-**Weeks 13 and 14 were also swapped.** A straight shift would have dropped Thanksgiving
-(Nov 26–27) onto the reliability/multi-region week — the differentiator, the one with the
-conference-submittable output — costing it both its Thursday harden block and its Friday
-gate. Swapping restores the original intent, where the deliberately-light customization
-week absorbs the holiday.
+**Day 1 is Wednesday 2026-08-26.** Week 1 runs Wed-Fri as six blocks: tokenization, then the bare
+harness; forward pass merged with sampling, then streaming plus a short sampling sweep; frontier
+watch, then Gate 1. Its deliverable drops the full sampling-variance chart to a recorded
+observation and three teach-backs to two. All five Week 1 oral questions stand unchanged.
 
-**Reading the entries above:** where an earlier entry says **W13** meaning reliability,
-multi-region, cross-region inference or session failover, read **W14**. Where it says
-**W14** meaning customization, SFT/DPO/RLVR or SageMaker, read **W13**. Weeks 1–12, 15 and
-16 keep their numbers; only their dates moved. The AWS-skills note above ("first stop in
-W2, W8, and W14") should read W2, W8, and W13.
-
-Nothing was lost. The program had not begun.
+**Everything from Week 2 onward is exactly as originally authored.** Week 2 starts Mon Aug 31,
+Labor Day still falls in W3, Thanksgiving still in W14, the program still ends Dec 11 and
+Continuous Mode still begins Dec 14. Week numbering and content are untouched — only Week 1's
+length changed.

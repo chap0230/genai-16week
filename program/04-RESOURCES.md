@@ -32,14 +32,14 @@ Read primary sources. The gap between you and the median candidate is that they 
 - **Attention Is All You Need** — [1706.03762](https://arxiv.org/abs/1706.03762) — read it once, properly.
 - **Scaling Laws for Neural Language Models** (Kaplan) — [2001.08361](https://arxiv.org/abs/2001.08361)
 - **Training Compute-Optimal LLMs** (Chinchilla) — [2203.15556](https://arxiv.org/abs/2203.15556) — why model size alone stopped being the story.
-- **LoRA** — [2106.09685](https://arxiv.org/abs/2106.09685) — W13.
+- **LoRA** — [2106.09685](https://arxiv.org/abs/2106.09685) — W14.
 
 ### Prompting and reasoning
 - **Chain-of-Thought Prompting** — [2201.11903](https://arxiv.org/abs/2201.11903)
 - **Self-Consistency** — [2203.11171](https://arxiv.org/abs/2203.11171)
 - **Tree of Thoughts** — [2305.10601](https://arxiv.org/abs/2305.10601) — W9.
 - **STaR: Self-Taught Reasoner** — [2203.14465](https://arxiv.org/abs/2203.14465) — the conceptual seed of reasoning-model training.
-- **DeepSeek-R1** — [2501.12948](https://arxiv.org/abs/2501.12948) — the open account of RL-trained reasoning. W13.
+- **DeepSeek-R1** — [2501.12948](https://arxiv.org/abs/2501.12948) — the open account of RL-trained reasoning. W14.
 - **DeepSeekMath / GRPO** — [2402.03300](https://arxiv.org/abs/2402.03300) — the algorithm behind much of modern reasoning training.
 
 ### Retrieval
@@ -64,9 +64,9 @@ Read primary sources. The gap between you and the median candidate is that they 
 - **AutoGen** — [2308.08155](https://arxiv.org/abs/2308.08155) — W10.
 
 ### Alignment, safety, security
-- **InstructGPT** — [2203.02155](https://arxiv.org/abs/2203.02155) — the RLHF pipeline. W13.
+- **InstructGPT** — [2203.02155](https://arxiv.org/abs/2203.02155) — the RLHF pipeline. W14.
 - **Constitutional AI** — [2212.08073](https://arxiv.org/abs/2212.08073) — W12; JHU's Anthropic masterclass covers this.
-- **DPO** — [2305.18290](https://arxiv.org/abs/2305.18290) — W13.
+- **DPO** — [2305.18290](https://arxiv.org/abs/2305.18290) — W14.
 - **Not what you've signed up for** (indirect prompt injection) — [2302.12173](https://arxiv.org/abs/2302.12173) — W12, foundational.
 - **Universal and Transferable Adversarial Attacks** (GCG) — [2307.15043](https://arxiv.org/abs/2307.15043) — W12.
 - **Sleeper Agents** — [2401.05566](https://arxiv.org/abs/2401.05566) — W12; why safety training can fail to remove behavior.
@@ -122,7 +122,7 @@ Selectively. Most are below your level; these aren't.
 
 **MCP:** the specification itself at `modelcontextprotocol.io/specification` — read the whole thing in W7, not a tutorial about it.
 
-**AWS Bedrock:** Converse API reference, Knowledge Bases, Guardrails, prompt caching, cross-region inference, quotas. — W2, W4, W12, W14.
+**AWS Bedrock:** Converse API reference, Knowledge Bases, Guardrails, prompt caching, cross-region inference, quotas. — W2, W4, W12, W13.
 
 **AWS AgentCore:** the developer guide at `docs.aws.amazon.com/bedrock-agentcore/latest/devguide/` — Runtime, Memory, Gateway, Identity, Browser, Code Interpreter, Observability, Payments, and the Harness managed agent loop. Also read the **release notes** page, which is the fastest way to see what's shipped recently. — W8, W9, W11.
 

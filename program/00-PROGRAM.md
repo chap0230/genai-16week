@@ -4,11 +4,11 @@
 
 | | |
 |---|---|
-| **Starts** | Monday, 2026-08-31 |
-| **Ends** | Friday, 2026-12-18 |
-| **Continuous Mode begins** | Monday, 2027-01-04 |
+| **Starts** | Wednesday, 2026-08-26 |
+| **Ends** | Friday, 2026-12-11 |
+| **Continuous Mode begins** | Monday, 2026-12-14 |
 | **Commitment** | 10 hrs/week — 1 hr at 6am + 1 hr at 1pm, weekdays |
-| **Total instructional time** | ~154 hours (JHU's program is 130) |
+| **Total instructional time** | ~150 hours (JHU's program is 130) |
 | **Cost** | $0 plus AWS sandbox spend (budget ~$40–75/mo) |
 
 ---
@@ -45,26 +45,24 @@ Sixteen weeks, with US holidays already absorbed so they don't derail you.
 
 | Wk | Dates | Theme | Gate deliverable |
 |----|-------|-------|------------------|
-| 1 | Aug 31–Sep 4 | LLM mechanics from first principles | Inference harness + landscape baseline |
-| 2 | Sep 7–11 *(Labor Day Mon)* | Inference control & the API as engineering surface | Prompt regression harness |
-| 3 | Sep 14–18 | Context engineering | Context budget analyzer |
-| 4 | Sep 21–25 | Retrieval I — embeddings, chunking, vector search | Working RAG on AWS |
-| 5 | Sep 28–Oct 2 | Retrieval II — advanced/graph/agentic RAG + retrieval eval | **PROJECT 1** |
-| 6 | Oct 5–9 | Evaluation as an engineering discipline | Eval suite + LLM-judge calibration |
-| 7 | Oct 12–16 | The agent loop from scratch + MCP | Hand-built agent + your own MCP server |
-| 8 | Oct 19–23 | Frameworks & the AWS agentic platform | Same agent, three frameworks, compared |
-| 9 | Oct 26–30 | Planning, reasoning, reflection, memory | Agent with persistent memory + replanning |
-| 10 | Nov 2–6 | Multi-agent systems | **PROJECT 2** |
-| 11 | Nov 9–13 | Agent evaluation & observability | Trajectory eval + OTel tracing |
-| 12 | Nov 16–20 | Security & safety for agentic systems | Threat model + red-team report |
-| 13 | Nov 23–27 *(Thanksgiving — light)* | Model customization & the training-side model | Customization decision framework |
-| 14 | Nov 30–Dec 4 | Reliability, resilience & multi-region agents | Multi-region agent + chaos results |
-| 15 | Dec 7–11 | Toolchain mastery + GenAI economics | Custom agent harness + cost model |
-| 16 | Dec 14–18 | Capstone + interview conversion | **PROJECT 3** + Continuous Mode live |
+| 1 | Aug 26–28 *(3 days)* | LLM mechanics from first principles | Inference harness + landscape baseline |
+| 2 | Aug 31–Sep 4 | Inference control & the API as engineering surface | Prompt regression harness |
+| 3 | Sep 7–11 *(Labor Day Mon)* | Context engineering | Context budget analyzer |
+| 4 | Sep 14–18 | Retrieval I — embeddings, chunking, vector search | Working RAG on AWS |
+| 5 | Sep 21–25 | Retrieval II — advanced/graph/agentic RAG + retrieval eval | **PROJECT 1** |
+| 6 | Sep 28–Oct 2 | Evaluation as an engineering discipline | Eval suite + LLM-judge calibration |
+| 7 | Oct 5–9 | The agent loop from scratch + MCP | Hand-built agent + your own MCP server |
+| 8 | Oct 12–16 | Frameworks & the AWS agentic platform | Same agent, three frameworks, compared |
+| 9 | Oct 19–23 | Planning, reasoning, reflection, memory | Agent with persistent memory + replanning |
+| 10 | Oct 26–30 | Multi-agent systems | **PROJECT 2** |
+| 11 | Nov 2–6 | Agent evaluation & observability | Trajectory eval + OTel tracing |
+| 12 | Nov 9–13 | Security & safety for agentic systems | Threat model + red-team report |
+| 13 | Nov 16–20 | Reliability, resilience & multi-region agents | Multi-region agent + chaos results |
+| 14 | Nov 23–27 *(Thanksgiving — light)* | Model customization & the training-side model | Customization decision framework |
+| 15 | Nov 30–Dec 4 | Toolchain mastery + GenAI economics | Custom agent harness + cost model |
+| 16 | Dec 7–11 | Capstone + interview conversion | **PROJECT 3** + Continuous Mode live |
 
-Week 2 loses Labor Day and Week 13 loses Thanksgiving Thursday and Friday — both are deliberately lighter weeks, not weeks where you fall behind. Week 13's gate moves to Wednesday.
-
-**Calendar reset, 2026-08-26.** The program originally opened Tuesday 2026-08-25, but the scheduled-task delivery pipeline did not work and no session was ever delivered. Rather than start a week already three blocks down, Week 1 was moved to Monday 2026-08-31 and every week shifted with it. Weeks 13 and 14 were also swapped so the deliberately-light customization week absorbs Thanksgiving and the reliability week — the differentiator — keeps its full five days including its gate. Nothing was lost; the program had not begun.
+Week 1 is three days. The scheduled-delivery pipeline was still being repaired on Tue Aug 25 and no session was delivered, so Day 1 is Wednesday Aug 26 and Week 1 runs Wed-Fri as six blocks with a compressed plan. **Week 2 starts Monday Aug 31 and every week after it is exactly as authored** — Labor Day still falls in Week 3, Thanksgiving still in Week 14, and the program still ends Dec 11. Week 3 loses Labor Day and Week 14 loses Thanksgiving Thursday and Friday — both are deliberately lighter weeks, not weeks where you fall behind. Week 14's gate moves to Wednesday.
 
 ---
 
@@ -147,10 +145,10 @@ One rule keeps this from becoming noise: a "what changed" note appears **only wh
 
 ## Your AWS sandbox setup
 
-Do this before Monday 2026-08-31. The week of Aug 24–28 is set aside for it. It is not part of the 16 weeks and should take about 90 minutes. **Day 1 does not start until this is done** — a build block against an unconfigured sandbox is how the first attempt failed.
+Do this before your first 1pm build block on Wed 2026-08-26. The Wednesday morning block needs none of it; the afternoon needs all of it. It is not part of the 16 weeks and should take about 90 minutes.
 
 - **Budget guardrails first.** AWS Budgets at $50/mo with alerts at 50/80/100%. A runaway agent loop is a real financial risk and you should experience thinking about that on day zero.
-- **Bedrock model access** enabled in `us-east-1` and `us-west-2` — both regions, deliberately, because Week 14 needs them.
+- **Bedrock model access** enabled in `us-east-1` and `us-west-2` — both regions, deliberately, because Week 13 needs them.
 - **Repo:** `genai-16week` with a directory per week. Private is fine. Everything you build lives here; the repo *is* the portfolio.
 - **Toolchain installed and authenticated:** Claude Code, Codex, Kiro, and the AgentCore CLI (`npm install -g @aws/agentcore`).
 - **Python 3.12+** with `uv`, and the AWS SDK. **Node 22+** for the TypeScript work in Weeks 8 and 15 — the AgentCore CLI's TypeScript path requires 22, not 20. Also install the AWS CDK; the CLI uses it to deploy.
@@ -178,9 +176,9 @@ A complete, defensible system: multi-region, evaluated with a real trajectory ev
 
 ## What happens after Week 16
 
-Continuous Mode starts Monday 2027-01-04 and runs indefinitely at a sustainable 3–4 hrs/week. Rotating focus: frontier-watch, AWS-watch, one deep-dive, one build, one paper. The Week 16 gate includes standing this up so it exists before motivation fades.
+Continuous Mode starts Monday 2026-12-14 and runs indefinitely at a sustainable 3–4 hrs/week. Rotating focus: frontier-watch, AWS-watch, one deep-dive, one build, one paper. The Week 16 gate includes standing this up so it exists before motivation fades.
 
-The premise is that expertise in this field is a maintained state, not an achieved one. The program's real deliverable isn't the 16 weeks — it's that on 2027-01-04 you have a working system for staying current, a portfolio of three demoable systems, and a 152-hour learning log you can mine for any interview question you'll be asked.
+The premise is that expertise in this field is a maintained state, not an achieved one. The program's real deliverable isn't the 16 weeks — it's that on 2026-12-14 you have a working system for staying current, a portfolio of three demoable systems, and a 152-hour learning log you can mine for any interview question you'll be asked.
 
 ---
 

@@ -25,15 +25,15 @@ THE FIRST LINE and stop — do not reconstruct the program from memory.
 
 TOOLS: the freshness check runs on the **AWS MCP** connector (Claude directory,
 authless). Its tools are `aws___search_documentation`, `aws___read_documentation`,
-`aws___retrieve_skill`, plus `aws___call_aws`, `aws___list_regions`,
-`aws___get_regional_availability`. They appear namespaced in your tool list as
+`aws___retrieve_skill`. It is authless — it serves public AWS documentation and
+curated skills, and needs no AWS account. They appear namespaced in your tool list as
 `mcp__AWS_MCP__aws___search_documentation`, `mcp__AWS_MCP__aws___read_documentation`,
 `mcp__AWS_MCP__aws___retrieve_skill` (confirmed live 2026-08-25). The namespaced name
 is the SAME tool, not a missing one. They may also be DEFERRED — if you see them
 listed by name only, load them first with
 `ToolSearch` query `select:mcp__AWS_MCP__aws___search_documentation,mcp__AWS_MCP__aws___read_documentation,mcp__AWS_MCP__aws___retrieve_skill`
 in ONE call, then use them. Search your tool list for `aws___` before concluding
-they are absent.
+they are absent. **Never use `aws___call_aws` — do not touch his AWS account. His sandbox is his own; you only read public docs.**
 
 USING THE SKILLS: call `aws___search_documentation` with `topics: ["agent_skills"]`
 to get the exact opaque `skill_name`, then pass it verbatim to `aws___retrieve_skill`.
@@ -47,9 +47,9 @@ relevant spec sites, and state plainly in the first line of your output that the
 AWS-curated skills were unavailable and the check ran on public docs only.
 
 WEEK LOOKUP (session days only):
-W1 Aug31-Sep4 · W2 Sep8-11 · W3 Sep14-18 · W4 Sep21-25 · W5 Sep28-Oct2 · W6 Oct5-9 · W7 Oct12-16 · W8 Oct19-23 · W9 Oct26-30 · W10 Nov2-6 · W11 Nov9-13 · W12 Nov16-20 · W13 Nov23-25 · W14 Nov30-Dec4 · W15 Dec7-11 · W16 Dec14-18 (all 2026)
+W1 Aug26-28 (3 days, Wed start) · W2 Aug31-Sep4 · W3 Sep8-11 · W4 Sep14-18 · W5 Sep21-25 · W6 Sep28-Oct2 · W7 Oct5-9 · W8 Oct12-16 · W9 Oct19-23 · W10 Oct26-30 · W11 Nov2-6 · W12 Nov9-13 · W13 Nov16-20 · W14 Nov23-25 · W15 Nov30-Dec4 · W16 Dec7-11 (all 2026)
 
-GUARDS: Sep 7 (Labor Day, in W2) and Nov 26-27 (Thanksgiving, in W13) are OFF — one-line rest note only. Before Aug 31, 2026: one line noting the program starts Aug 31, nothing else. After Dec 18, 2026: Continuous Mode, suggest a short build.
+GUARDS: Sep 7 (Labor Day, in W3) and Nov 26-27 (Thanksgiving, in W14) are OFF — one-line rest note only. Before Aug 26, 2026: one line noting the program starts Aug 26, nothing else. After Dec 11, 2026: Continuous Mode, suggest a short build.
 
 ## STEP 1 — FRESHNESS CHECK (do this before writing anything)
 

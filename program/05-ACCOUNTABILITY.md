@@ -92,7 +92,7 @@ I can generate a prompt at 6am and tell you plainly when you're eleven sessions 
 
 > **Send your Friday gate write-up to one or two peers.** Every week. It doesn't need to be reciprocal, formal, or even acknowledged. Someone *expecting an artifact from you on a known day* is most of what a cohort provides, and it's the single highest-leverage thing you can add to this program.
 >
-> **Book the Week 14 internal presentation now** — multi-region agentic resilience, to the AWS Resilience Specialty community you helped found. Put a date on the calendar in Week 1, before you know whether you'll be ready. A real audience on a real date is a stronger forcing function than every gate in this document combined, and unlike a cohort, it's your actual professional network and it compounds into your career.
+> **Book the Week 13 internal presentation now** — multi-region agentic resilience, to the AWS Resilience Specialty community you helped found. Put a date on the calendar in Week 1, before you know whether you'll be ready. A real audience on a real date is a stronger forcing function than every gate in this document combined, and unlike a cohort, it's your actual professional network and it compounds into your career.
 
 **I don't persist between sessions the way a person does.** My memory of this program is written to files, so a future session reads the plan rather than remembering the conversation. That works, but it means the files *are* the program — keep `LEARNING-LOG.md` current and the tracker clicked, because that's the state I can actually see.
 
@@ -111,4 +111,4 @@ I can generate a prompt at 6am and tell you plainly when you're eleven sessions 
 - **Tracker:** Cowork sidebar → *GenAI & Agentic AI — 16-Week Intensive*
 - **Scheduled prompts:** `~/Claude/Scheduled/genai-{morning-brief,midday-build,weekly-review}/SKILL.md`
 
-**Day 1 is Monday, 2026-08-31.** Sandbox setup happens the week of Aug 24–28 — about 90 minutes, and Day 1 does not start until it is done. Put the recurring 1–2pm calendar hold in place at the same time. First morning brief arrives 6am Monday 2026-08-31.
+**Day 1 is Wednesday, 2026-08-26.** Sandbox setup happens Wednesday morning before the 1pm block, about 90 minutes. Put the recurring 1–2pm calendar hold in place at the same time. First morning brief arrives 6am Tuesday.
