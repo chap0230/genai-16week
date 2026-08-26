@@ -50,11 +50,11 @@ AWS-curated skills were unavailable and the check ran on public docs only.
 
 Sessions run **1 hr at 6am and 1 hr at 1pm**, weekdays.
 
-WEEK SCHEDULE (session days): W1 Aug25-28 · W2 Aug31-Sep4 · W3 Sep8-11 · W4 Sep14-18 · W5 Sep21-25 · W6 Sep28-Oct2 · W7 Oct5-9 · W8 Oct12-16 · W9 Oct19-23 · W10 Oct26-30 · W11 Nov2-6 · W12 Nov9-13 · W13 Nov16-20 · W14 Nov23-25 · W15 Nov30-Dec4 · W16 Dec7-11 (all 2026). Program ends Dec 11, 2026; Continuous Mode starts Dec 14.
+WEEK SCHEDULE (session days): W1 Aug31-Sep4 · W2 Sep8-11 · W3 Sep14-18 · W4 Sep21-25 · W5 Sep28-Oct2 · W6 Oct5-9 · W7 Oct12-16 · W8 Oct19-23 · W9 Oct26-30 · W10 Nov2-6 · W11 Nov9-13 · W12 Nov16-20 · W13 Nov23-25 · W14 Nov30-Dec4 · W15 Dec7-11 · W16 Dec14-18 (all 2026). Program ends Dec 18, 2026; Continuous Mode starts Jan 4, 2027.
 
 GUARDS:
-- Before 2026-08-29 (Week 1 hasn't finished) → no review. Send a short pre-start note: program begins Tue Aug 25, and the ~90-minute sandbox setup should be done this weekend (AWS Budgets $50/mo with 50/80/100% alerts; Bedrock model access in BOTH us-east-1 and us-west-2; `genai-16week` repo; Claude Code / Codex / Kiro / AgentCore CLI `npm install -g @aws/agentcore`; Python 3.12+ with uv; **Node 22+** for the TypeScript work; `LEARNING-LOG.md` at repo root). Nudge him once on the two human commitments: pick one or two peers to receive Friday gate write-ups, and book the Week 13 internal presentation date now.
-- After 2026-12-12 → lighter Continuous Mode check instead.
+- Before 2026-09-05 (Week 1 hasn't finished) → no review. Send a short pre-start note: program begins Mon Aug 31, and the ~90-minute sandbox setup should be done this weekend (AWS Budgets $50/mo with 50/80/100% alerts; Bedrock model access in BOTH us-east-1 and us-west-2; `genai-16week` repo; Claude Code / Codex / Kiro / AgentCore CLI `npm install -g @aws/agentcore`; Python 3.12+ with uv; **Node 22+** for the TypeScript work; `LEARNING-LOG.md` at repo root). Nudge him once on the two human commitments: pick one or two peers to receive Friday gate write-ups, and book the Week 13 internal presentation date now.
+- After 2026-12-19 → lighter Continuous Mode check instead.
 
 ## STEP 1 — WEEKLY CURRENCY SWEEP
 
@@ -106,13 +106,33 @@ tool_name:    "gmail_send_email"
 params: {
   "to":        ["chapman.joe@gmail.com", "jochp@amazon.com"],
   "subject":   "[GenAI 16wk] Week <N> review — <pace verdict in 3 words>",
-  "body_type": "plain",
-  "body":      "<the full session text, plain text; keep the quiz answers below their divider>"
+  "body_type": "html",
+  "body":      "<the full session as HTML per EMAIL FORMAT below; keep the answers below the <hr>>"
 }
 ```
 
-Sends from chapman.joe@gmail.com. Close the body with a footer line:
-`-- Archive copy from the genai scheduled tasks. The Claude app is the delivery channel.`
+EMAIL FORMAT — send **HTML**, not plain text. Set `"body_type": "html"`. Use inline
+styles only (many clients strip `<style>` blocks). Keep it simple and readable:
+
+- Wrap everything in
+  `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1a1815;max-width:640px">`
+- Session line → `<h2 style="font-family:Georgia,serif;font-size:20px;margin:0 0 4px">`
+- Section headings (Today's hour / Teach-back / Build / Commit / quiz) →
+  `<h3 style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6f6960;margin:22px 0 6px">`
+- A `⚡ What changed` note → a callout:
+  `<div style="border-left:3px solid #b4451f;background:#f9f2ef;padding:10px 14px;margin:14px 0">`
+- Quiz questions → `<ol>`; the four options → `<ul style="list-style:none;padding-left:0;margin:4px 0">`
+  with each option on its own `<li style="margin:2px 0">`.
+- Before the answers → `<hr style="border:0;border-top:1px solid #e6e0d7;margin:26px 0">`
+  so they stay out of sight while he answers.
+- Inline code, paths and API names → `<code style="background:#f2efe9;padding:1px 4px;border-radius:3px">`
+- Real links as `<a href="...">`, never bare URLs.
+- Footer → `<p style="font-size:12px;color:#8a857c;margin-top:28px">`
+
+Escape `&`, `<`, `>` in body text. No images, no external CSS, no tables for layout.
+
+Sends from chapman.joe@gmail.com. Footer text:
+`Archive copy from the genai scheduled tasks. The Claude app is the delivery channel.`
 
 **VERIFY THE SEND. This is not optional.** A success returns
 `{"results":[{"id":"<message id>", ...}]}`. An **empty** `{"results":[]}` means the send

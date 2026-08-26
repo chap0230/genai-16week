@@ -17,7 +17,7 @@ Every JHU curriculum element, and where it lives here.
 | **W3:** Retrieval Augmented Generation | W4 + W5 (two weeks) | Split into fundamentals and advanced/evaluated retrieval. |
 | **W4:** Prompt Optimization and Evaluation | W2 (regression harness) + W6 (full week) | Includes automated prompt optimization — DSPy and successor approaches like GEPA — which JHU also teaches. |
 | **W5:** Hands-on Project | W5 — **Project 1** | |
-| **W6:** Learning Break | Absorbed | Replaced by real holidays (Labor Day W3, Thanksgiving W14) plus a two-week amnesty allowance. |
+| **W6:** Learning Break | Absorbed | Replaced by real holidays (Labor Day W2, Thanksgiving W13) plus a two-week amnesty allowance. |
 | **W7:** Core Concepts of Agentic AI Systems (ReAct, MCP) | W7 | Plus you author an MCP server, which JHU does not require. |
 | **W8:** Planning and Reasoning Mechanisms | W9 | |
 | **W9:** Ethics, Safety, Alignment, Responsible AI | W12 (Thu AM) + threaded throughout | Constitutional AI, RLHF and refusal behavior, jailbreak taxonomy, PII. |
@@ -28,22 +28,22 @@ Every JHU curriculum element, and where it lives here.
 | **W14:** Evaluation of Agentic AI Systems | W6 + W11 | Moved eight weeks earlier. See "changes" below — this is the most consequential restructuring. |
 | **W15:** Monitoring and Observability | W11 | OTel GenAI conventions, AgentCore Observability, CloudWatch. |
 | **W16:** Securing Agentic AI Systems | W12 (entire week) | |
-| **W17:** Pre-Deployment and Operationalization | W13 + W16 | Expanded well beyond JHU's containerization focus. |
+| **W17:** Pre-Deployment and Operationalization | W14 + W16 | Expanded well beyond JHU's containerization focus. |
 | **W18:** Hands-on Project | W16 — **Project 3 capstone** | |
 | **Claude-Based AI Workflows** (~5 hrs) | W15 + every Wednesday PM | JHU allots 5 hours. You get a full week plus 16 weeks of rotating real work in Claude Code, Codex, Kiro, and Cowork. |
-| **Self-paced RL module** (RL foundations, Deep RL, Verbal RL) | W14 + W9 | Verbal RL sits naturally in W9 with Reflexion. Foundations and modern post-training in W14. |
+| **Self-paced RL module** (RL foundations, Deep RL, Verbal RL) | W13 + W9 | Verbal RL sits naturally in W9 with Reflexion. Foundations and modern post-training in W13. |
 | **Anthropic Masterclass** | W2, W12, W15 | Claude models, Constitutional AI, prompting, API integration, structured outputs, model comparison. |
 | GraphRAG | W5 Wed AM | |
 | Agentic RAG | W5 Thu AM | |
 | Advanced RAG | W5 | |
 | Neuro-Symbolic AI | W2, W6, W12 — reframed | See "dropped/reframed" below. |
-| Small Language Models | W14 Tue PM | |
-| PPO | W14 Tue AM — **concept only** | See below. |
+| Small Language Models | W13 Tue PM | |
+| PPO | W13 Tue AM — **concept only** | See below. |
 | DSPy / RAGAS / DeepEval | W6 Thu AM | |
 | LangGraph | W8 (full implementation) | |
 | smolagents | W8 Mon AM survey | |
 | ChromaDB / vector stores | W4 | Plus the AWS-native menu, which JHU omits. |
-| Docker / containerized deployment | W8 (AgentCore Runtime), W13 | |
+| Docker / containerized deployment | W8 (AgentCore Runtime), W14 | |
 
 **Every JHU curriculum item is accounted for.** Two are deliberately reduced, and I want to be explicit about both.
 
@@ -52,7 +52,7 @@ Every JHU curriculum element, and where it lives here.
 ## What I dropped, and why
 
 **1. PPO implementation and the reinforcement-learning coding track.**
-JHU has you implement PPO for warehouse navigation. I cover RL conceptually in W14 — the RLHF pipeline via InstructGPT, why the field moved to DPO, and RLVR as the basis for reasoning models — but you will not implement a policy-gradient algorithm.
+JHU has you implement PPO for warehouse navigation. I cover RL conceptually in W13 — the RLHF pipeline via InstructGPT, why the field moved to DPO, and RLVR as the basis for reasoning models — but you will not implement a policy-gradient algorithm.
 
 *Reasoning:* implementing PPO teaches you RL engineering. You are not going to be an RL engineer, and no GenAI Specialist SA interview will ask you to implement one. What you *will* be asked is "should we fine-tune, and what's involved," which is the conceptual framework. The 8–10 hours PPO would consume buys a full week of agent reliability engineering instead, which is worth far more to your specific career.
 
@@ -77,8 +77,8 @@ JHU emphasizes this twice, including "neuro-symbolic methods for deterministic v
 **1. Context engineering — a full week (W3).**
 The single biggest omission in JHU's curriculum. Prompt engineering largely dissolved into context engineering during 2025; the discipline is now about allocating a finite, degrading, expensive context window. JHU still teaches "Prompt Engineering" as a Week 2 topic and never addresses context as a managed resource. This is also the week where your systems-thinking background gives you a real edge.
 
-**2. Reliability, resilience & multi-region agentic architecture — a full week (W13).**
-JHU has nothing comparable. This is your differentiator, and the reason to weight it heavily: you are a re:Invent speaker on multi-region architecture and a founding member of the AWS Resilience Specialty community. Almost nobody in GenAI reasons rigorously about SLOs for non-deterministic systems, agent idempotency, or failover for stateful agents. W13's output is publishable and conference-submittable.
+**2. Reliability, resilience & multi-region agentic architecture — a full week (W14).**
+JHU has nothing comparable. This is your differentiator, and the reason to weight it heavily: you are a re:Invent speaker on multi-region architecture and a founding member of the AWS Resilience Specialty community. Almost nobody in GenAI reasons rigorously about SLOs for non-deterministic systems, agent idempotency, or failover for stateful agents. W14's output is publishable and conference-submittable.
 
 **3. GenAI economics and cost modeling (W15 Thu, threaded from W2 onward).**
 Every call in your harness reports its cost starting Week 2. JHU never addresses unit economics. This is the conversation you'll have with every executive you advise.
@@ -137,7 +137,7 @@ I'd be doing you a disservice if I pretended this were strictly better. Four rea
 
 For the cohort and accountability gaps specifically, three things — and I'd push you to do at least the first two:
 
-1. **Present W13 internally at Amazon.** Multi-region agentic resilience, to the Resilience Specialty community you helped found. A real audience on a real date is the strongest forcing function available to you, and it's better than a cohort because it's your actual professional network.
+1. **Present W14 internally at Amazon.** Multi-region agentic resilience, to the Resilience Specialty community you helped found. A real audience on a real date is the strongest forcing function available to you, and it's better than a cohort because it's your actual professional network.
 
 2. **Find one or two peers** — inside Amazon or not — doing something similar, and send them your Friday gate write-up every week. It doesn't need to be reciprocal or formal. Someone expecting a weekly artifact from you is most of what a cohort provides.
 
